@@ -22,7 +22,7 @@ class Formulario extends Component {
 
     render() {
         return (
-            <form className="cotizar-auto" onSubmit={this.cotizarSeguro}>
+            <form className="cotizar-auto" onSubmit={this.cotizarSeguro.bind(this)}>
                 <div className="campo">
                     <label>Marca</label>
                     <select name="marca" ref={this.marcaRef}>
