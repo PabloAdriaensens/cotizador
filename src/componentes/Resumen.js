@@ -1,9 +1,29 @@
 import React, {Component} from 'react';
+import {primeraMayuscula} from "../Helper";
 
-class Resumen extends Component{
-    render() {
+class Resumen extends Component {
+
+    mostrarResumen = () => {
+        const {marca, year, plan} = this.props.datos;
+
+        if (!marca || !plan || !year) return null;
+
         return (
-            <p>Desde Resumen</p>
+            <div className="resumen">
+                <h2>Resumen de Cotización</h2>
+                <li>Marca: {primeraMayuscula(marca)}</li>
+                <li>Año del auto: {year}</li>
+                <li>Plan: {primeraMayuscula(plan)}</li>
+            </div>
+        )
+    }
+
+    render() {
+
+        return (
+            <div>
+                {this.mostrarResumen()}
+            </div>
         )
     }
 }
