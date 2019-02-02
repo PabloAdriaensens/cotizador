@@ -9,12 +9,21 @@ class Formulario extends Component {
     planBasicoRef = React.createRef();
     planCompletoRef = React.createRef();
 
-    cotizarSeguro(e) {
-        e.preventDefault()
+    cotizarSeguro = (e) => {
+        e.preventDefault();
+
+        // leer el plan
+        const plan = this.planBasicoRef.current.checked ? 'basico' : 'completo';
 
         // obtener los datos
 
         // crear el objeto
+        const infoAuto = {
+            marca: this.marcaRef.current.value,
+            year: this.yearRef.current.value,
+            plan: plan
+        }
+        console.log(infoAuto);
 
         // enviarle al componente principal
 
