@@ -22,12 +22,12 @@ class Formulario extends Component {
             marca: this.marcaRef.current.value,
             year: this.yearRef.current.value,
             plan: plan
-        }
+        };
         console.log(infoAuto);
 
         // enviarle al componente principal
 
-    }
+    };
 
     render() {
         return (
