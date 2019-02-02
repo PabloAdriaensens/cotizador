@@ -28,6 +28,9 @@ class Formulario extends Component {
         // enviarle al componente principal
         this.props.cotizarSeguro(infoAuto);
 
+        // resetear el formulario
+        e.currentTarget.reset()
+
     };
 
     render() {
